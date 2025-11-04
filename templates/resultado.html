@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Uny+Perto - Resultados</title>
+    <link rel="stylesheet" href="../static/styles/resultado.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+    <header>
+        <nav>
+            <h1>Uny + Perto</h1>
+            <div class="mobile-menu" id="mobile-menu">
+                <div class="line1"></div>
+                <div class="line2"></div>
+                <div class="line3"></div>
+            </div>
+            <ul class="nav-list">
+                <li><a href="index.html">Início</a></li>
+                <li><a href="areaprofissional.html">Área do Profissional</a></li>
+                <li><a href="convenios.html">Convênios</a></li>
+                <li><a href="resultado.html">Resultados</a></li>
+                <li><a href="login.html" class="login-btn">Login/Cadastrar</a></li>
+            </ul>
+        </nav>
+    </header>
+    <main>
+        <section class="paciente-info">
+            <div class="info-header">
+                <i class="fas fa-user-circle"></i>
+                <div>
+                    <h2>Paciente: <span>NOME COMPLETO DO PACIENTE</span></h2>
+                    <p>Código: <strong>2348540</strong></p>
+                </div>
+            </div>
+            <div class="info-details">
+                <div class="detail-item">
+                    <i class="fas fa-calendar"></i>
+                    <div>
+                        <small>Data de Nascimento</small>
+                        <strong>Data</strong>
+                    </div>
+                </div>
+                <div class="detail-item">
+                    <i class="fas fa-venus-mars"></i>
+                    <div>
+                        <small>Sexo</small>
+                        <strong>Feminino/Masculino</strong>
+                    </div>
+                </div>
+                <div class="detail-item">
+                    <i class="fas fa-phone"></i>
+                    <div>
+                        <small>Telefone</small>
+                        <strong>(XX) XXXXXXXXX</strong>
+                    </div>
+                </div>
+                <div class="detail-item">
+                    <i class="fas fa-map-marker-alt"></i>
+                    <div>
+                        <small>Endereço</small>
+                        <strong>local</strong>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="ordem-servico">
+            <div class="os-header">
+                <h3><i class="fas fa-clipboard-list"></i> Ordem de Serviço</h3>
+                <span class="status-badge disponivel">Último resultado disponível</span>
+            </div>
+            <div class="os-info">
+                <p><strong>Código OS:</strong> 192.670421399</p>
+                <p><strong>Data/Hora:</strong> 02/10/2022 - 07:53:22</p>
+                <p><strong>Solicitante:</strong> Nome da Solicitante</p>
+                <p><strong>Unidade de coleta:</strong> Nome da unidade</p>
+            </div>
+        </section>
+
+        <section class="exames">
+            <h3><i class="fas fa-flask"></i> Informações da Ordem de Serviço</h3>
+            <table class="exames-table">
+                <thead>
+                    <tr>
+                        <th>Procedimento</th>
+                        <th>Data/Hora Entrega</th>
+                        <th>Status</th>
+                        <th>Material</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>Exemplo exame</td>
+                        <td>04/10/2025 - 18:00:00</td>
+                        <td><span class="status concluido">Concluído</span></td>
+                        <td>SORO</td>
+                    </tr>
+                    <tr>
+                        <td>Exemplo exame</td>
+                        <td>04/10/2025 - 18:00:00</td>
+                        <td><span class="status concluido">Concluído</span></td>
+                        <td>SORO</td>
+                    </tr>
+                    <tr>
+                        <td>Exemplo exame</td>
+                        <td>04/10/2025 - 18:00:00</td>
+                        <td><span class="status concluido">Concluído</span></td>
+                        <td>SORO</td>
+                    </tr>
+                    <tr>
+                        <td>Exemplo exame</td>
+                        <td>06/10/2025 - 17:00:00</td>
+                        <td><span class="status negativo">Negativo</span></td>
+                        <td>URINA</td>
+                    </tr>
+                </tbody>
+            </table>
+        </section>
+    </main>
+    <script src="../src/js/script.js"></script>
+</body>
+</html>
