@@ -41,3 +41,27 @@ const mobileNavbar = new MobileNavbar(
   ".nav-list li",
 );
 mobileNavbar.init();
+
+const btnLogin = document.getElementById('btn-login');
+
+if (btnLogin) {
+    btnLogin.addEventListener('click', function(event) {
+        event.preventDefault();
+        
+        alert('Login realizado com sucesso!');
+        
+        window.location.href = '/index.html';
+    });
+}
+
+const btnCadastrar = document.getElementById('btn-cadastrar');
+
+if (btnCadastrar) {
+    btnCadastrar.addEventListener('click', function(event) {
+        event.preventDefault();
+        
+        alert('Cadastro realizado com sucesso!');
+        
+        window.location.href = 'login.html';
+    });
+}
