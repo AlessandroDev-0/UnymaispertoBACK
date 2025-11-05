@@ -59,6 +59,7 @@ if (btnCadastrar) {
         
         alert('Cadastro realizado com sucesso!');
         
+        
         window.location.href = 'login.html';
     });
 }
