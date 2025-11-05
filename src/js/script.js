@@ -48,8 +48,6 @@ if (btnLogin) {
     btnLogin.addEventListener('click', function(event) {
         event.preventDefault();
         
-        alert('Login realizado com sucesso!');
-        
         window.location.href = '/index.html';
     });
 }
