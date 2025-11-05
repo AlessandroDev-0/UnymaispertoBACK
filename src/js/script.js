@@ -65,3 +65,7 @@ if (btnCadastrar) {
         window.location.href = 'login.html';
     });
 }
+
+  document.getElementById('btn-veja').addEventListener('click', function() {
+    window.location.href = 'templates/localizacao.html';
+  });
