@@ -35,22 +35,22 @@ main {
 }
 
 .card {
-    display: flex;
-    flex-wrap: wrap; /* Permite que os cards quebrem para a próxima linha, se necessário */
-    justify-content: center; /* Centraliza os cards na tela */
-    gap: 15px; /* Reduz o espaçamento entre os cards */
-    padding: 20px;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 2rem;
+    padding: 1rem;
 }
 
 /* Estilização dos cards */
 .servico-card {
-    flex: 1 1 calc(25% - 15px); 
-    max-width: 220px; 
-    text-align: center;
-    border: 1px solid #ddd;
+    background: #fff;
     border-radius: 8px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
     transition: transform 0.3s ease;
+    max-width: 100%;
 }
 
 .servico-card:hover {
@@ -60,7 +60,7 @@ main {
 /* Ajuste das imagens */
 .servico-card img {
     width: 100%; /* Faz a imagem ocupar toda a largura do card */
-    height: 150px; /* Reduz a altura da imagem */
+    height: 200px; /* Reduz a altura da imagem */
     object-fit: cover; /* Garante que a imagem seja cortada proporcionalmente */
     border-top-left-radius: 8px;
     border-top-right-radius: 8px;
@@ -68,13 +68,14 @@ main {
 
 .servico-card h3 {
     color: #3366AA;
-    font-size: 1.5rem;
-    padding: 1.5rem 1.5rem 0.5rem;
+    padding: 1rem 1rem 0.5rem;
+    font-size: 1.25rem;
 }
 
 .servico-card p {
-    color: #6b7280;
-    padding: 0 1.5rem;
+    padding: 0 1rem;
+    color: #666;
+    flex-grow: 1;
     line-height: 1.6;
     margin-bottom: 1.5rem;
 }
@@ -83,10 +84,11 @@ main {
     display: inline-block;
     background-color: #3366AA;
     color: white;
-    padding: 0.8rem 2rem;
-    margin: 0 1.5rem 1.5rem;
-    border-radius: 8px;
+    padding: 0.75rem 1.5rem;
+    margin: 1rem;
+    border-radius: 6px;
     text-decoration: none;
+    text-align: center;
     transition: background-color 0.3s ease;
 }
 
@@ -124,36 +126,53 @@ main {
 }
 
 @media (max-width: 768px) {
-    .card {
-        grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+    main {
+        padding: 1rem;
     }
 
     .titulo-pagina {
-        font-size: 2rem;
+        font-size: 1.8rem;
+        margin-top: 60px;
+    }
+
+    .card {
+        grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+        gap: 1rem;
     }
 
     .servico-card {
-        flex: 1 1 calc(50% - 15px); /* Cada card ocupa 50% da largura */
+        max-width: 100%;
     }
 
-    .servico-card img {
-        height: 120px; /* Reduz a altura da imagem */
-    }
-
+    /* Remova o display: none dos elementos */
     .servico-card h3,
     .servico-card p,
     .servico-card .btn {
-        display: none; /* Esconde o título, texto e botão */
+        display: block;
     }
 
     .servico-card img {
-        cursor: pointer; /* Adiciona o cursor de clique à imagem */
+        height: 150px;
+    }
+
+    .servico-card h3 {
+        font-size: 1.2rem;
+    }
+
+    .servico-card p {
+        font-size: 0.9rem;
+    }
+
+    .servico-card .btn {
+        padding: 0.5rem 1rem;
+        font-size: 0.9rem;
+        margin: 0.5rem 1rem 1rem;
     }
 }
 
 @media (max-width: 480px) {
     .titulo-pagina {
-        font-size: 1.8rem;
+        font-size: 1.5rem;
         padding: 1rem;
     }
 
@@ -162,7 +181,8 @@ main {
     }
 
     .servico-card {
-        padding: 1rem;
+        margin: 0 auto;
+        width: 100%;
     }
 
     .servico-card img {
